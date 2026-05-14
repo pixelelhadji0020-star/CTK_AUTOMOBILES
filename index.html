@@ -35,23 +35,12 @@
             letter-spacing: 5px;
             text-transform: uppercase;
         }
-        .brand-sub {
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            letter-spacing: 2px;
-            margin-top: 5px;
-        }
 
         .hero {
-            padding: 50px 20px;
+            padding: 40px 20px;
             text-align: center;
-            background: linear-gradient(180deg, #0a0a0a 0%, #141414 100%);
         }
-        .hero h1 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            font-weight: 300;
-        }
+        .hero h1 { font-size: 1.8rem; margin-bottom: 10px; font-weight: 300; }
         .hero b { color: var(--gold); font-weight: 800; }
 
         .services-grid {
@@ -65,21 +54,35 @@
 
         .service-card {
             background: var(--card-bg);
-            padding: 20px;
+            padding: 20px 10px;
             border-radius: 15px;
             border: 1px solid #222;
             text-align: center;
-            height: 100%;
             transition: 0.3s;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: space-between;
+            min-height: 160px;
         }
-        .service-card:active { transform: scale(0.95); border-color: var(--gold); }
-        .service-icon { font-size: 1.5rem; margin-bottom: 10px; display: block; }
-        .service-card h3 { font-size: 0.85rem; color: var(--gold); text-transform: uppercase; margin-bottom: 5px; }
-        .service-card p { font-size: 0.7rem; color: var(--text-dim); }
+
+        .service-card:active { background: #1f1f1f; border-color: var(--gold); }
+        
+        .service-icon { font-size: 1.5rem; margin-bottom: 8px; }
+        .service-card h3 { font-size: 0.85rem; color: var(--gold); text-transform: uppercase; margin-bottom: 4px; }
+        .service-card p { font-size: 0.7rem; color: var(--text-dim); margin-bottom: 10px; }
+
+        /* Badge d'action cliquable */
+        .click-badge {
+            font-size: 0.65rem;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 0.5px solid rgba(212, 175, 55, 0.3);
+        }
 
         .sarrlux-promo {
             margin: 20px;
@@ -89,8 +92,8 @@
             border-radius: 15px;
             text-align: center;
         }
-        .sarrlux-promo h2 { font-size: 1.1rem; margin-bottom: 10px; color: var(--gold); text-transform: uppercase; }
-        .sarrlux-promo p { font-size: 0.85rem; margin-bottom: 20px; color: var(--text-dim); }
+        .sarrlux-promo h2 { font-size: 1.1rem; color: var(--gold); margin-bottom: 10px; }
+        .sarrlux-promo p { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 15px; }
 
         .btn {
             display: inline-block;
@@ -99,19 +102,15 @@
             padding: 12px 25px;
             border-radius: 30px;
             font-weight: bold;
-            font-size: 0.9rem;
             text-decoration: none;
-            transition: 0.3s;
         }
 
         footer {
-            padding: 40px 20px;
+            padding: 30px 20px;
             text-align: center;
-            border-top: 1px solid #222;
             font-size: 0.8rem;
             color: var(--text-dim);
         }
-        .footer-logo { color: var(--gold); font-weight: bold; margin-bottom: 10px; display: block; }
 
         .whatsapp-bar {
             position: fixed;
@@ -125,9 +124,8 @@
             border-radius: 50px;
             text-align: center;
             font-weight: bold;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-            z-index: 1000;
             text-decoration: none;
+            z-index: 1000;
         }
     </style>
 </head>
@@ -135,12 +133,10 @@
 
     <header>
         <div class="brand-name">CTK AUTOMOBILES</div>
-        <div class="brand-sub">VENTE • LOCATION • DIAGNOSTIC</div>
     </header>
 
     <section class="hero">
         <h1>L'automobile au service de <b>votre ambition.</b></h1>
-        <p>Solutions premium pour la gestion et l'acquisition de vos véhicules à Dakar.</p>
     </section>
 
     <div class="services-grid">
@@ -148,7 +144,8 @@
             <div class="service-card">
                 <span class="service-icon">🚗</span>
                 <h3>Vente</h3>
-                <p>Stock disponible sur TikTok.</p>
+                <p>Stock sur TikTok</p>
+                <span class="click-badge">Appuyez ici</span>
             </div>
         </a>
 
@@ -156,7 +153,8 @@
             <div class="service-card">
                 <span class="service-icon">🔑</span>
                 <h3>Location</h3>
-                <p>Courte et longue durée.</p>
+                <p>Courte & Longue durée</p>
+                <span class="click-badge">Appuyez ici</span>
             </div>
         </a>
 
@@ -164,7 +162,8 @@
             <div class="service-card">
                 <span class="service-icon">💻</span>
                 <h3>Diagnostic</h3>
-                <p>Scanner OBD2 & Expertise.</p>
+                <p>Scanner & Expertise</p>
+                <span class="click-badge">Appuyez ici</span>
             </div>
         </a>
 
@@ -172,22 +171,21 @@
             <div class="service-card">
                 <span class="service-icon">🛳️</span>
                 <h3>Import</h3>
-                <p>Canada, Corée, USA.</p>
+                <p>Canada, Corée, USA</p>
+                <span class="click-badge">Appuyez ici</span>
             </div>
         </a>
     </div>
 
     <div class="sarrlux-promo">
         <h2>SarrLux Convoyage</h2>
-        <p>Besoin de passer la visite technique sans vous déplacer ?</p>
+        <p>Visite technique sans déplacement.</p>
         <a href="https://sarrlux.vercel.app/" class="btn">DÉCOUVRIR SARRLUX</a>
     </div>
 
     <footer>
-        <span class="footer-logo">CTK-AUTOMOBILES</span>
-        <p>CEO: Charles Sarr</p>
+        <p><b>CTK-AUTOMOBILES</b></p>
         <p>Dakar, Sénégal</p>
-        <p style="margin-top: 15px;">&copy; 2026 CTK. Tous droits réservés.</p>
     </footer>
 
     <a href="https://wa.me/221776729740?text=Bonjour%20CTK-AUTOMOBILES,%20je%20souhaite%20un%20rendez-vous." class="whatsapp-bar">
